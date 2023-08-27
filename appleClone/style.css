@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border - box;
+    font-family: SF PRO DISPLAY;
 }
 
 html,
@@ -22,13 +23,55 @@ body {
     background-color: black;
 }
 
-#page>nav {
+#page nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
     height: 7vh;
-    width: 100vw;
-    background-color: white;
+    width: 70vw;
+    color: white;
+    background-color: black;
     position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
+#page nav h3 {
+    font-weight: 400;
+}
+
+#page video {
+    height: 100%;
+    width: 110%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#page nav button {
+    padding: 7px 20px;
+    border-radius: 50px;
+    border: none;
+}
+
+#pageButtom {
+    height: 20%;
+    width: 25%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #dadada93;
+}
+
+#pageButtom img {
+    margin-top: 1rem;
+    width: 100%;
+}
 
 #page1 {
     position: relative;
