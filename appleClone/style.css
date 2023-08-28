@@ -73,20 +73,30 @@ body {
     width: 100%;
 }
 
-#page1 {
+#page1,
+#page2 {
     position: relative;
     height: 100vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
 }
 
-#page1 h2 {
+#page1 h2,
+#page2 h2 {
     color: #fff;
     font-weight: 400;
     font-size: 3rem;
+    text-align: center;
     position: absolute;
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
+}
+
+#page1 video,
+#page2 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
