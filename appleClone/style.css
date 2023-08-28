@@ -79,3 +79,14 @@ body {
     width: 100vw;
     background-color: rgb(255, 255, 255);
 }
+
+#page1 h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 3rem;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
