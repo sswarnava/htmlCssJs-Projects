@@ -110,7 +110,7 @@ body {
 
 #page3Upper {
     height: 25%;
-    width: 35%;
+    width: 50%;
     position: absolute;
     z-index: 9;
     top: 5%;
@@ -118,38 +118,49 @@ body {
     transform: translateX(-50%);
 }
 
-#page3UpperInner img {
-    width: 170%;
+#page3Upper img {
+    width: 80%;
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-#page3UpperInner {
+#pageUperText {
     position: absolute;
     bottom: 0%;
     height: 60%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0px 80px;
-    color: #ff823d;
+    justify-content: center;
+    gap: 5rem;
+    color: #ff5900;
 }
 
-#page3UpperInner h3 {
-    font-weight: 500;
+#page3UpperText h3 {
+    margin-top: 5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
-#page3 button {
+
+#page3lower img {
+    width: 70%;
     position: absolute;
-    bottom: -100%;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#page3lower button {
+    position: absolute;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 30px;
     border: 1px solid #000;
-    font-weight: 500;
+    font-weight: 600;
     background-color: #fff;
     border-radius: 50px;
     font-size: 1.4vw;
