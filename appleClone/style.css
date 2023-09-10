@@ -482,3 +482,29 @@ body {
 #page13 h5 {
     width: 35%;
 }
+
+#page14 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+}
+
+#page14 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#centerPage14 {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    bottom: 18%;
+    right: 5%;
+    color: #fff;
+}
+
+#centerPage14 h1 {
+    margin-bottom: 1.7vw;
+}
