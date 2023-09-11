@@ -32,21 +32,21 @@ function loco() {
 
 loco()
 
-gsap.to("#page>video", {
+gsap.to("#section>video", {
     scrollTrigger: {
-        trigger: `#page>video`,
+        trigger: `#section>video`,
         start: `.0001% top`,
         end: `bottom top`,
         scroller: `#main`
     },
     onStart: () => {
-        document.querySelector("#page>video").play()
+        document.querySelector("#section>video").play()
     }
 })
 
-gsap.to("#page", {
+gsap.to("#section", {
     scrollTrigger: {
-        trigger: `#page`,
+        trigger: `#section`,
         start: `top top`,
         end: `bottom top`,
         scroller: `#main`,
@@ -54,9 +54,9 @@ gsap.to("#page", {
     }
 })
 
-gsap.to("#pageButtom", {
+gsap.to("#sectionButtom", {
     scrollTrigger: {
-        trigger: `#pageButtom`,
+        trigger: `#sectionButtom`,
         start: `5% top`,
         end: `bottom top`,
         scroller: `#main`,
@@ -67,7 +67,7 @@ gsap.to("#pageButtom", {
 
 var tl = gsap.timeline({
     scrollTrigger: {
-        trigger: `#page1`,
+        trigger: `#section1`,
         start: `top top`,
         scrub: 1,
         scroller: `#main`,
@@ -76,13 +76,13 @@ var tl = gsap.timeline({
 })
 
 
-tl.to("#page1>h2", {
+tl.to("#section1>h2", {
     top: `-50%`
 })
 
 var tl1 = gsap.timeline({
     scrollTrigger: {
-        trigger: `#page2`,
+        trigger: `#section2`,
         start: `top top`,
         scrub: 1,
         scroller: `#main`,
@@ -91,13 +91,13 @@ var tl1 = gsap.timeline({
 })
 
 
-tl1.to("#page2>h2", {
+tl1.to("#section2>h2", {
     top: `-50%`
 })
 
 var tl2 = gsap.timeline({
     scrollTrigger: {
-        trigger: `#page4`,
+        trigger: `#section4`,
         start: `top top`,
         scrub: 1,
         scroller: `#main`,
@@ -106,13 +106,13 @@ var tl2 = gsap.timeline({
 })
 
 
-tl2.to("#page4>#center-page4", {
+tl2.to("#section4>#center-section4", {
     top: `-50%`
 })
 
 
 function canvas() {
-    const canvas = document.querySelector("#page7>canvas");
+    const canvas = document.querySelector("#section7>canvas");
     const context = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
@@ -397,7 +397,7 @@ function canvas() {
 canvas();
 
 function canvas1() {
-    const canvas = document.querySelector("#page12>canvas");
+    const canvas = document.querySelector("#section12>canvas");
     const context = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
@@ -460,7 +460,7 @@ function canvas1() {
         ease: `none`,
         scrollTrigger: {
             scrub: 0.15,
-            trigger: `#page12`,
+            trigger: `#section12`,
             //   set start end according to preference
             start: `top top`,
             end: `80% top`,
@@ -497,7 +497,7 @@ function canvas1() {
     }
     ScrollTrigger.create({
 
-        trigger: "#page12",
+        trigger: "#section12",
         pin: true,
         // markers:true,
         scroller: `#main`,
@@ -510,7 +510,7 @@ canvas1();
 
 var tl3 = gsap.timeline({
     scrollTrigger: {
-        trigger: `#page15`,
+        trigger: `#section15`,
         start: `top top`,
         scrub: 1,
         scroller: `#main`,
@@ -519,13 +519,13 @@ var tl3 = gsap.timeline({
 })
 
 
-tl3.to("#page15>#troff", {
+tl3.to("#section15>#troff", {
     opacity: 0
 })
 
 var tl4 = gsap.timeline({
     scrollTrigger: {
-        trigger: `#page16`,
+        trigger: `#section16`,
         start: `top top`,
         scrub: 1,
         scroller: `#main`,
@@ -534,13 +534,13 @@ var tl4 = gsap.timeline({
 })
 
 
-tl4.to("#page16>#snroff", {
+tl4.to("#section16>#snroff", {
     opacity: 0
 })
 
-gsap.to("#page17>img", {
+gsap.to("#section17>img", {
     scrollTrigger: {
-        trigger: `#page17>img`,
+        trigger: `#section17>img`,
         start: `top bottom`,
         end: `bottom 60%`,
         scrub: .5,
