@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validator</title>
+</head>
+
+<body>
+    <h1>Email Validator</h1>
+    <form action="/submit" method="post">
+        <label for=""> Enter your email to validate </label>
+        <br>
+        <input type="email" name="userEmail" id="userEmail" placeholder="Enter Email" required>
+        <br>
+        <input id="submitBtn" class="btn" type="submit" value="Submit">
+    </form>
+
+    <div class="container">
+        <h2>Your Results</h2>
+        <div id="resultCont">
+            Your results will show here
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
