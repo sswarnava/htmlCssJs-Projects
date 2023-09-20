@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300;1,400;1,700&family=Merriweather:wght@400;700&family=Quicksand:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(4, 18, 42);
+    color: rgb(192, 192, 192);
+    font-family: 'Lato', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.emailValidator {
+    margin-top: 10rem;
+}
+
+.header {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    width: 17rem;
+    height: 10rem;
+    margin: 0 auto;
+    background-color: rgb(190, 173, 41);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.formLabel {
+    margin-left: 6%;
+    color: black;
+    font-weight: 600;
+    background: transparent;
+    font-size: 19px;
+}
+
+.userEmail {
+    width: 80%;
+    background: rgb(222, 222, 222);
+    border: rgb(255, 255, 255) solid 2px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 1.5rem 6%;
+}
+
+.submitBtn {
+    width: 10rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: white 2px solid;
+    font-weight: 600;
+    margin-left: 20%;
+    font-size: 17px;
+}
+
+.container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.container img {
+    margin-top: 1rem;
+    width: 5rem;
+}
+
+.result {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: rgb(149, 207, 61);
+    font-weight: 700;
+}
+
+.noResult {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: rgb(199, 47, 47);
+    font-weight: 700;
+}
