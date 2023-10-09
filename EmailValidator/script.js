@@ -20,6 +20,4 @@ submitBtn.addEventListener("click", async (e) => {
     resultCont.innerHTML = str
 })
 
-// state:
-// smtp_check:
-// deliverable
+// Website for API - https://app.emailvalidation.io

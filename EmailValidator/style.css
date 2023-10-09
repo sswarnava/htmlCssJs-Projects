@@ -21,7 +21,7 @@
 }
 
 form {
-    width: 17rem;
+    width: 20rem;
     height: 10rem;
     margin: 0 auto;
     background-color: rgb(190, 173, 41);
@@ -30,7 +30,7 @@ form {
 }
 
 .formLabel {
-    margin-left: 6%;
+    margin-left: 12%;
     color: black;
     font-weight: 600;
     background: transparent;
@@ -38,12 +38,14 @@ form {
 }
 
 .userEmail {
-    width: 80%;
-    background: rgb(222, 222, 222);
+    width: 85%;
+    background: rgb(233, 233, 233);
+    color: black;
+    font-size: 1rem;
     border: rgb(255, 255, 255) solid 2px;
     border-radius: 10px;
     padding: 10px 10px;
-    margin: 1.5rem 6%;
+    margin: 1.5rem 4%;
 }
 
 .submitBtn {
@@ -52,8 +54,9 @@ form {
     border-radius: 10px;
     border: white 2px solid;
     font-weight: 600;
-    margin-left: 20%;
+    margin-left: 25%;
     font-size: 17px;
+    color: rgb(255, 255, 255);
 }
 
 .container {
