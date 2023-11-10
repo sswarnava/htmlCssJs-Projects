@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300;1,400;1,700&family=Merriweather:wght@400;700&family=Quicksand:wght@400;500;600&family=Rubik:wght@300;400;500&display=swap');
+
+
+* {
+    background-color: rgb(35, 42, 61);
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+form {
+    width: 70%;
+    height: 20rem;
+    margin: 10rem auto;
+    border: 2px solid white;
+    border-radius: 7px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.search>input {
+    height: 1.8rem;
+    width: 70%;
+    margin: 1.4rem 0;
+    padding-left: 5px;
+    border: none;
+    border-radius: .3rem;
+    background-color: aliceblue;
+}
+
+.search>button {
+    height: 2rem;
+    margin-top: 1.4rem;
+    border: none;
+    background-color: rgb(255, 133, 88);
+    border-radius: .3rem;
+}
+
+.search>button:hover {
+    cursor: pointer;
+}
+
+.search>button>span {
+    background: transparent;
+}
+
+.tempData {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    margin: 2.5rem 0;
+}
+
+.tempData>span {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.tempData>img {
+    width: 5rem;
+}
+
+.buttomData {
+    padding-top: 1rem;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.windsData>span:nth-child(3),
+.humidityData>span:nth-child(3) {
+    font-size: .7rem;
+}
+
+@media only screen and (min-width: 500px) {
+    form {
+        width: 60%;
+    }
+
+    .tempData {
+        gap: 10%;
+    }
+
+    .buttomData {
+        gap: 15%;
+    }
+}
+
+@media only screen and (min-width: 730px) {
+    form {
+        width: 50%;
+    }
+
+    .tempData {
+        gap: 14%;
+    }
+
+    .buttomData {
+        gap: 25%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    form {
+        width: 30%;
+        height: 22rem;
+    }
+
+    .tempData {
+        gap: 14%;
+    }
+
+    .buttomData {
+        gap: 25%;
+    }
+}
