@@ -28,7 +28,7 @@ form {
     height: 1.8rem;
     width: 70%;
     margin: 1.4rem 0;
-    padding-left: 5px;
+    padding-left: 15px;
     border: none;
     border-radius: .3rem;
     background-color: aliceblue;
@@ -53,7 +53,7 @@ form {
 .tempData {
     display: flex;
     justify-content: center;
-    gap: 1.6rem;
+    gap: 1rem;
     margin: 2.5rem 0;
 }
 
@@ -84,7 +84,7 @@ form {
     }
 
     .tempData {
-        gap: 10%;
+        gap: 5%;
     }
 
     .buttomData {
@@ -98,7 +98,7 @@ form {
     }
 
     .tempData {
-        gap: 14%;
+        gap: 8%;
     }
 
     .buttomData {
@@ -113,7 +113,7 @@ form {
     }
 
     .tempData {
-        gap: 14%;
+        gap: 12%;
     }
 
     .buttomData {
