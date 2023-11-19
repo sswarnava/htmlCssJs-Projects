@@ -1,3 +1,6 @@
+import WEATHER_API from "./api.js"
+// console.log(WEATHER_API);
+
 let btn = document.getElementById('locationBtn')
 
 btn.addEventListener('click', (city) => {
@@ -12,7 +15,7 @@ function weatherCity(city) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'b4634041f8mshedba667d622017ap1bd867jsne7424e07211d',
+            'X-RapidAPI-Key': WEATHER_API,
             'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
 
         }
