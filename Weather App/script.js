@@ -1,17 +1,33 @@
-import WEATHER_API from "./api.js"
+import { LOCATION_API, WEATHER_API } from "./api.js"
 // console.log(WEATHER_API);
 
 let btn = document.getElementById('locationBtn')
 
 btn.addEventListener('click', (city) => {
-    weatherCity(document.getElementById('location').value)
+    cityLocation(document.getElementById('location').value)
     document.getElementById('location').value = ''
 })
 
-weatherCity('delhi')
+cityLocation('delhi')
 
-function weatherCity(city) {
+function cityLocation(city) {
+    // get city timezone using api fetch
+    const urlTime = `https://world-time-by-api-ninjas.p.rapidapi.com/v1/worldtime?city=${city}`;
+    const cityOptions = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': LOCATION_API,
+            'X-RapidAPI-Host': 'world-time-by-api-ninjas.p.rapidapi.com'
+        }
+    };
 
+    fetch(urlTime, cityOptions)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(error => console.error(error))
+
+    // get weather using api fetch
+    const urlWeather = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`
     const options = {
         method: 'GET',
         headers: {
@@ -21,11 +37,14 @@ function weatherCity(city) {
         }
     };
 
-    fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`, options)
+    fetch(urlWeather, options)
         .then(reponse => reponse.json())
         .then((reponse) => console.log(reponse))
         .catch(err => console.log(err))
 }
+
+
+
 
 // document.getElementById('cloud_pct').innerHTML = reponse.cloud_pct
 //     feels_like = reponse.feels_like
