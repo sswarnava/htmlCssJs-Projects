@@ -12,26 +12,31 @@
 
 <body>
     <div class="card">
+        <!-- input form -->
         <form action="#" class="search">
             <input type="text" placeholder="Enter the location" id="location">
             <button class="material-symbols-outlined" id="locationBtn" type="submit">search</button>
         </form>
 
+        <!-- heading -->
         <h2>Today <span id="currentLocation"></span> Weather</h2>
 
+        <!-- Temperature Section -->
         <div class="tempData">
-            <span>29&degc <br> Clear</span>
+            <span id="temp">26&degc</span>
+            <span id="cloudy">clear</span>
             <br>
             <img src="assets/clearSun.png" alt="">
         </div>
 
+        <!-- Others weather data-->
         <div class="buttomData">
             <div class="windsData">
                 <span class="material-symbols-outlined">
                     air
                 </span>
                 <br>
-                <span>23Km/h Winds</span>
+                <span id="winds">2km/h</span>
             </div>
 
             <div class="humidityData">
@@ -39,12 +44,27 @@
                     humidity_low
                 </span>
                 <br>
-                <span>51% humidity</span>
+                <span id="humidity">50%</span>
+            </div>
+
+            <div class="maxTemp">
+                <span class="material-symbols-outlined">
+                    thermometer_gain
+                </span>
+                <br>
+                <span id="maxtemp">28</span>
+            </div>
+
+            <div class="minTemp">
+                <span class="material-symbols-outlined">
+                    thermometer_loss
+                </span>
+                <span id="mintemp">28</span>
             </div>
         </div>
 
     </div>
-    <script type="module" src="script.js"></script>
+    <!-- <script type="module" src="script.js"></script> -->
 </body>
 
 </html>
