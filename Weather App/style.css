@@ -12,14 +12,17 @@
 
 .card {
     width: 70%;
-    height: 25rem;
+    height: 33rem;
     margin: 10rem auto;
     border: 2px solid white;
     border-radius: 7px;
 }
 
-.card h2{
+.card h2 {
     text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 0 2rem;
 }
 
 .search {
@@ -64,9 +67,14 @@
     margin: 2.5rem 0;
 }
 
-.tempData>span {
-    margin-top: 1rem;
-    font-size: 1.6rem;
+.temp {
+    margin-top: 2rem;
+}
+
+.temp>span {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: rgb(230, 255, 118);
 }
 
 .tempData>img {
@@ -74,24 +82,27 @@
 }
 
 .buttomData {
-    padding-top: 1rem;
-    display: flex;
-    gap: 2.5rem;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 25%;
 }
 
-.windsData>span:nth-child(3),
-.humidityData>span:nth-child(3) {
-    font-size: .7rem;
+.buttomData>div {
+    margin-top: 1rem;
 }
+
 
 @media only screen and (min-width: 500px) {
     .card {
-        width: 60%;
+        width: 65%;
     }
 
     .tempData {
         gap: 5%;
+    }
+
+    .temp>span {
+        font-size: 1.7rem;
     }
 
     .buttomData {
@@ -100,8 +111,8 @@
 }
 
 @media only screen and (min-width: 730px) {
-    .card {
-        width: 50%;
+    .card h2 {
+        font-size: 2rem;
     }
 
     .tempData {
@@ -115,12 +126,20 @@
 
 @media only screen and (min-width: 1000px) {
     .card {
-        width: 30%;
-        height: 22rem;
+        width: 60%;
+        height: 35rem;
+    }
+
+    .card h2 {
+        font-size: 2.7rem;
     }
 
     .tempData {
         gap: 12%;
+    }
+
+    .temp>span {
+        font-size: 2rem;
     }
 
     .buttomData {

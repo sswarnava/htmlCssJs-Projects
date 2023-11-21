@@ -19,12 +19,14 @@
         </form>
 
         <!-- heading -->
-        <h2>Today <span id="currentLocation"></span> Weather</h2>
+        <h2>Today <span id="currentLocation"></span> <br> Weather</h2>
 
         <!-- Temperature Section -->
         <div class="tempData">
-            <span id="temp">26&degc</span>
-            <span id="cloudy">clear</span>
+            <div class="temp">
+                <span id="temp"></span>
+                <span id="cloudy"></span>
+            </div>
             <br>
             <img src="assets/clearSun.png" alt="">
         </div>
@@ -36,7 +38,7 @@
                     air
                 </span>
                 <br>
-                <span id="winds">2km/h</span>
+                <span id="winds"></span>
             </div>
 
             <div class="humidityData">
@@ -44,7 +46,7 @@
                     humidity_low
                 </span>
                 <br>
-                <span id="humidity">50%</span>
+                <span id="humidity"></span>
             </div>
 
             <div class="maxTemp">
@@ -52,14 +54,15 @@
                     thermometer_gain
                 </span>
                 <br>
-                <span id="maxtemp">28</span>
+                <span id="maxtemp"></span>
             </div>
 
             <div class="minTemp">
                 <span class="material-symbols-outlined">
                     thermometer_loss
                 </span>
-                <span id="mintemp">28</span>
+                <br>
+                <span id="mintemp"></span>
             </div>
         </div>
 
