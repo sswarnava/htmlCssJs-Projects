@@ -1,5 +1,4 @@
 import { LOCATION_API, WEATHER_API } from "./api.js"
-// console.log(WEATHER_API);
 
 let btn = document.getElementById('locationBtn')
 
@@ -8,10 +7,11 @@ btn.addEventListener('click', (city) => {
     document.getElementById('location').value = ''
 })
 
-// cityLocation('delhi')
+cityLocation('delhi')
 
 function cityLocation(city) {
     document.getElementById('currentLocation').innerHTML = city
+
     // get city timezone using api fetch
     const urlTime = `https://world-time-by-api-ninjas.p.rapidapi.com/v1/worldtime?city=${city}`;
     const cityOptions = {
@@ -24,6 +24,9 @@ function cityLocation(city) {
 
     fetch(urlTime, cityOptions)
         .then(response => response.json())
+        .then((reponse) => {
+            getTime(reponse.hour)
+        })
         .catch(error => console.error(error))
 
     // get weather using api fetch
@@ -43,10 +46,11 @@ function cityLocation(city) {
             weatherStatus(reponse)
         )
         .catch(err => console.log(err))
+
+
 }
 
 function weatherStatus(weatherData) {
-    console.log(weatherData)
     document.getElementById('temp').innerHTML = `${weatherData.temp}&degc`
     document.getElementById('winds').innerHTML = `${weatherData.wind_speed}Km/h`
     document.getElementById('humidity').innerHTML = `${weatherData.humidity}% humidity`
@@ -56,6 +60,7 @@ function weatherStatus(weatherData) {
     cloudStatus(weatherData.cloud_pct)
 }
 
+
 function cloudStatus(cloudData) {
     if (cloudData <= 35) {
         document.getElementById('cloudy').innerHTML = 'clear'
@@ -63,12 +68,43 @@ function cloudStatus(cloudData) {
     else if (cloudData > 35 && cloudData <= 70) {
         document.getElementById('cloudy').innerHTML = 'cloudy'
     }
-    else{
+    else {
         document.getElementById('cloudy').innerHTML = 'rainny'
     }
 }
 
 
-//     feels_like = weatherData.feels_like
-//     sunrise = reponse.sunrise
-//     sunset = reponse.sunset
+function getTime(nowTime) {
+    // using getTime we set the sun/moon emoji
+    let nowTimeIs = parseInt(nowTime)
+    console.log(typeof nowTimeIs);
+    console.log(nowTimeIs);
+    setTimeout(() => {
+        let cloud = document.getElementById('cloudy').innerHTML
+        if (nowTimeIs > 5 && nowTimeIs < 19) {
+            // sun
+            if (cloud === 'clear') {
+                document.getElementById('sunMoonEmoji').src = './assets/clearSun.png'
+            }
+            else if (cloud === 'cloudy') {
+                document.getElementById('sunMoonEmoji').src = './assets/cloudSun.png'
+            }
+            else {
+                document.getElementById('sunMoonEmoji').src = './assets/rainnySun.png'
+            }
+
+        } else {
+            // moon
+            if (cloud === 'clear') {
+                document.getElementById('sunMoonEmoji').src = './assets/moon.png'
+            }
+            else if (cloud === 'cloudy') {
+                document.getElementById('sunMoonEmoji').src = './assets/cloudMoon.png'
+
+            }
+            else {
+                document.getElementById('sunMoonEmoji').src = './assets/rainnyMoon.png'
+            }
+        }
+    }, 1000);
+}
