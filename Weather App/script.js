@@ -77,9 +77,10 @@ function cloudStatus(cloudData) {
 function getTime(nowTime) {
     // using getTime we set the sun/moon emoji
     let nowTimeIs = parseInt(nowTime)
+    console.log(nowTimeIs);
     setTimeout(() => {
         let cloud = document.getElementById('cloudy').innerHTML
-        if (nowTimeIs > 5 && nowTimeIs < 19) {
+        if (nowTimeIs > 5 && nowTimeIs < 18) {
             // sun
             if (cloud === 'clear') {
                 document.getElementById('sunMoonEmoji').src = './assets/clearSun.png'
