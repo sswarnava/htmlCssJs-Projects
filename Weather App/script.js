@@ -45,7 +45,7 @@ function cityLocation(city) {
         .then((reponse) =>
             weatherStatus(reponse)
         )
-        .catch(err => console.log(err))
+        .catch(err => alert(err))
 
 
 }
@@ -77,8 +77,6 @@ function cloudStatus(cloudData) {
 function getTime(nowTime) {
     // using getTime we set the sun/moon emoji
     let nowTimeIs = parseInt(nowTime)
-    console.log(typeof nowTimeIs);
-    console.log(nowTimeIs);
     setTimeout(() => {
         let cloud = document.getElementById('cloudy').innerHTML
         if (nowTimeIs > 5 && nowTimeIs < 19) {
