@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300;1,400;1,700&family=Merriweather:wght@400;700&family=Noto+Sans:wght@600&family=Quicksand:wght@400;500;600&family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(37, 51, 82);
+    font-family: 'Lato', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+.quizDiv {
+    width: 27rem;
+    background-color: rgb(115, 115, 241);
+    color: white;
+    border-radius: 1rem;
+    margin: 5rem auto;
+    padding-bottom: 2rem;
+}
+
+.quizDiv>h1 {
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    background: transparent;
+}
+
+.questionDiv {
+    background: transparent;
+}
+
+.questionDiv>p {
+    text-align: left;
+    padding: 0 1.2rem;
+    background: transparent;
+    font-weight: 600;
+}
+
+.questionDiv>button {
+    width: 23rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1rem auto;
+    padding: .5rem 1rem;
+    border: 2px solid rgb(37, 51, 82);
+    border-radius: 5px;
+    color: white;
+}
+
+.questionDiv>button:hover {
+    cursor: pointer;
+    background: rgb(164, 164, 255);
+    color: black;
+    font-weight: 600;
+}
