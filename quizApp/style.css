@@ -28,6 +28,12 @@
     background: transparent;
 }
 
+.quizDiv>h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    background: transparent;
+}
+
 .questionDiv {
     background: transparent;
 }
@@ -51,11 +57,38 @@
     color: white;
 }
 
-.questionDiv>button:hover {
+.resetBtn {
+    width: 23rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1rem auto;
+    padding: .5rem 1rem;
+    border: 2px solid rgb(37, 51, 82);
+    border-radius: 5px;
+    color: white;
+}
+
+.questionDiv>button:hover:not([disabled]) {
     cursor: pointer;
     background: rgb(164, 164, 255);
     color: black;
     font-weight: 600;
+}
+
+.disabledButton {
+    background-color: #999;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.correctAnswar {
+    background-color: rgb(38, 58, 8);
+    color: black;
+}
+
+.wrongAnswar {
+    background-color: rgb(67, 13, 13);
 }
 
 .nextBtn {
@@ -72,7 +105,7 @@
     font-size: medium;
 }
 
-.nextBtn:hover {
+.nextBtn:hover:not([disabled]) {
     background-color: rgb(216, 94, 0);
     cursor: pointer;
     color: white;

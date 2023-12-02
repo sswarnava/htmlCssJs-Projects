@@ -9,16 +9,17 @@
 </head>
 
 <body>
-    <div class="quizDiv">
+    <div id="quizDiv" class="quizDiv">
         <h1>Quiz App</h1>
-        <div class="questionDiv">
+        <h3></h3>
+        <form id="qnestionForm" class="questionDiv">
             <p id="question"></p>
-            <button id="btn0"></button>
-            <button id="btn1"></button>
-            <button id="btn2"></button>
-            <button id="btn3"></button>
-        </div>
-        <button class="nextBtn">Next</button>
+            <button id="btn0" class="ansBtn" onclick="clickBtn(this.innerHTML, this.id)"></button>
+            <button id="btn1" class="ansBtn" onclick="clickBtn(this.innerHTML, this.id)"></button>
+            <button id="btn2" class="ansBtn" onclick="clickBtn(this.innerHTML, this.id)"></button>
+            <button id="btn3" class="ansBtn" onclick="clickBtn(this.innerHTML, this.id)"></button>
+        </form>
+        <button id="nextbtn" class="nextBtn" onclick="nextQnShow()" disabled>Next</button>
     </div>
 </body>
 <script src="script.js"></script>
