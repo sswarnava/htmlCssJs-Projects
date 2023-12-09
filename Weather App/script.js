@@ -1,17 +1,32 @@
 import { LOCATION_API, WEATHER_API } from "./api.js"
 
-let btn = document.getElementById('locationBtn')
+async function getTime(nowTime) {
+    try {
+        // using getTime we set the sun/moon emoji
+        let nowTimeIs = parseInt(nowTime)
 
-btn.addEventListener('click', (city) => {
-    cityLocation(document.getElementById('location').value)
-    document.getElementById('location').value = ''
-})
+        let cloud = await document.getElementById('cloudy').innerHTML
 
-cityLocation('delhi')
+        if (nowTimeIs > 5 && nowTimeIs < 18) {
+            // Day Time
+            if (cloud === 'clear') document.getElementById('sunMoonEmoji').src = './assets/clearSun.png'
+            else if (cloud === 'cloudy') document.getElementById('sunMoonEmoji').src = './assets/cloudSun.png'
+            else document.getElementById('sunMoonEmoji').src = './assets/rainnySun.png'
+        } else {
+            // Night time
+            if (cloud === 'clear') document.getElementById('sunMoonEmoji').src = './assets/moon.png'
+            else if (cloud === 'cloudy') document.getElementById('sunMoonEmoji').src = './assets/cloudMoon.png'
+            else document.getElementById('sunMoonEmoji').src = './assets/rainnyMoon.png'
+        }
+    }
+    catch (error) {
+        console.error('Error fetching data:', error);
+    }
+
+}
 
 function cityLocation(city) {
     document.getElementById('currentLocation').innerHTML = city
-
     // get city timezone using api fetch
     const urlTime = `https://world-time-by-api-ninjas.p.rapidapi.com/v1/worldtime?city=${city}`;
     const cityOptions = {
@@ -46,64 +61,28 @@ function cityLocation(city) {
             weatherStatus(reponse)
         )
         .catch(err => alert(err))
+}
 
-
+function cloudStatus(cloudData) {
+    if (cloudData <= 35) document.getElementById('cloudy').innerHTML = 'clear'
+    else if (cloudData > 35 && cloudData <= 70) document.getElementById('cloudy').innerHTML = 'cloudy'
+    else document.getElementById('cloudy').innerHTML = 'rainny'
 }
 
 function weatherStatus(weatherData) {
+    cloudStatus(weatherData.cloud_pct)
     document.getElementById('temp').innerHTML = `${weatherData.temp}&degc`
     document.getElementById('winds').innerHTML = `${weatherData.wind_speed}Km/h`
     document.getElementById('humidity').innerHTML = `${weatherData.humidity}% humidity`
     document.getElementById('maxtemp').innerHTML = `${weatherData.max_temp}&degc`
     document.getElementById('mintemp').innerHTML = `${weatherData.min_temp}&degc`
-
-    cloudStatus(weatherData.cloud_pct)
 }
 
+cityLocation('delhi')
 
-function cloudStatus(cloudData) {
-    if (cloudData <= 35) {
-        document.getElementById('cloudy').innerHTML = 'clear'
-    }
-    else if (cloudData > 35 && cloudData <= 70) {
-        document.getElementById('cloudy').innerHTML = 'cloudy'
-    }
-    else {
-        document.getElementById('cloudy').innerHTML = 'rainny'
-    }
+const findCity = (e) => {
+    cityLocation(e.target.value)
+    e.target.value = ''
 }
 
-
-function getTime(nowTime) {
-    // using getTime we set the sun/moon emoji
-    let nowTimeIs = parseInt(nowTime)
-    console.log(nowTimeIs);
-    setTimeout(() => {
-        let cloud = document.getElementById('cloudy').innerHTML
-        if (nowTimeIs > 5 && nowTimeIs < 18) {
-            // sun
-            if (cloud === 'clear') {
-                document.getElementById('sunMoonEmoji').src = './assets/clearSun.png'
-            }
-            else if (cloud === 'cloudy') {
-                document.getElementById('sunMoonEmoji').src = './assets/cloudSun.png'
-            }
-            else {
-                document.getElementById('sunMoonEmoji').src = './assets/rainnySun.png'
-            }
-
-        } else {
-            // moon
-            if (cloud === 'clear') {
-                document.getElementById('sunMoonEmoji').src = './assets/moon.png'
-            }
-            else if (cloud === 'cloudy') {
-                document.getElementById('sunMoonEmoji').src = './assets/cloudMoon.png'
-
-            }
-            else {
-                document.getElementById('sunMoonEmoji').src = './assets/rainnyMoon.png'
-            }
-        }
-    }, 1000);
-}
+document.getElementById('searchLocation').addEventListener("change", findCity)
